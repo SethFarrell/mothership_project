@@ -352,14 +352,14 @@ export default function Home() {
           <div className="fade-up" ref={videoRef}>
             <SysLabel id="SYS_01B">FIELD DEMONSTRATION</SysLabel>
             <h2 className="text-3xl font-black mb-4" style={{ fontFamily: "var(--font-display)", color: "oklch(0.92 0.01 220)" }}>
-              Live Mission Demo
+              Mothership Field Testing
             </h2>
             {/* YouTube embed */}
             <div className="relative rounded-lg overflow-hidden border border-[oklch(0.22_0.02_255)] shadow-[0_0_40px_oklch(0.78_0.17_204/0.08)] aspect-video">
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube.com/embed/0Yiroe8WIz8?rel=0&modestbranding=1&color=white"
-                title="Mothership Field Demo — Autonomous UGV + UAV SAR Mission"
+                title="Mothership Field Testing — Autonomous UGV + UAV"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
@@ -396,7 +396,7 @@ export default function Home() {
               Polaris GEM e6 Hardware
             </h2>
             <p className="text-[oklch(0.65_0.01_220)] max-w-2xl mb-12">
-              The Polaris GEM e6 serves as the ground ego-vehicle — a six-seat electric utility vehicle modified with a full drive-by-wire interface, sensor suite, and onboard compute stack for fully autonomous operation.
+              The Polaris GEM e6 serves as the ground ego-vehicle, a six-seat electric utility vehicle equipped with a PACMod drive-by-wire interface, sensor suite, and onboard compute stack for fully autonomous operation.
             </p>
           </div>
 
@@ -692,7 +692,7 @@ export default function Home() {
               UAV Software Stack
             </h2>
             <p className="text-[oklch(0.65_0.01_220)] max-w-2xl mb-12">
-              Each UAV runs a lightweight, inference-optimized software stack that enables real-time victim detection, georeferenced goal publishing, and autonomous flight mode management — all onboard the Jetson Orin Nano.
+              Each UAV runs a lightweight, inference-optimized software stack that enables real-time victim detection, setpoint control from on-board planner or UGV planner, and autonomous flight mode management, all onboard the Jetson Orin Nano.
             </p>
           </div>
 
@@ -717,8 +717,8 @@ export default function Home() {
                 color="amber"
                 items={[
                   "Detection node publishes georeferenced victim locations over ROS 2",
-                  "RTK-fused geolocation for sub-meter accuracy in ENU frame",
-                  "UGV receives goal coordinates and triggers A* replanning immediately",
+                  "GPS-fused geolocation for victims and obstacles in ENU frame",
+                  "UGV receives georeferenced information and re-plans as necessary",
                   "Continuous updates as UAV surveys new regions of the environment",
                 ]}
               />
@@ -778,7 +778,7 @@ export default function Home() {
               Future Work
             </h2>
             <p className="text-[oklch(0.65_0.01_220)] max-w-2xl mb-12">
-              The current GLIDE framework establishes a strong foundation for coordinated aerial-ground autonomy. The following directions represent the next phase of research and development.
+              The current GLIDE framework establishes a foundation for coordinated aerial-ground autonomy. The next section discusses both ongoing work as well as conceptual ideas for improvement.
             </p>
           </div>
 
@@ -818,7 +818,7 @@ export default function Home() {
                 Expanded Ground Fleet
               </h3>
               <p className="text-[oklch(0.65_0.01_220)] leading-relaxed mb-4">
-                Incorporation of additional ground platforms — particularly legged quadrupeds — to extend ground coverage into areas where the Polaris GEM e6 cannot operate. Rough terrain, stairs, and narrow passages become accessible with a heterogeneous ground team.
+                Incorporation of additional ground platforms such as quadrupeds to extend ground coverage into areas where the Polaris GEM e6 cannot operate. Rough terrain, stairs, and narrow passages become accessible with a heterogeneous ground team.
               </p>
               <div className="space-y-2 mt-4">
                 {[
