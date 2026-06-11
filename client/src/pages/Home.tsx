@@ -454,8 +454,8 @@ export default function Home() {
                 color="amber"
               />
               <HardwareItem
-                name="Watson Inertial Navigation System"
-                detail="High-grade IMU for precise attitude and acceleration measurements"
+                name="Watson DMS-SGP02 Inertial Navigation System"
+                detail="High-grade IMU for precise attitude and acceleration measurements with dual-gps for heading"
                 color="amber"
               />
             </div>
@@ -469,6 +469,16 @@ export default function Home() {
               <HardwareItem
                 name="Outdoor Access Point"
                 detail="High-power outdoor Wi-Fi access point for UAV-UGV communication over shared ROS 2 network"
+                color="cyan"
+              />
+              <HardwareItem
+                name="Telemetry Radios"
+                detail="Dual Telemetry Radios for optional ground control connection with UAVs"
+                color="cyan"
+              />
+              <HardwareItem
+                name="4G Hotspot"
+                detail="Mobile data connection for receiving NTRIP corrections for RTK"
                 color="cyan"
               />
             </div>
@@ -748,7 +758,7 @@ export default function Home() {
                 <div className="text-xs text-[oklch(0.5_0.01_220)]" style={{ fontFamily: "var(--font-mono)" }}>Publishes: /victim_goal</div>
               </div>
               <div className="flex flex-col items-center gap-2">
-                <div className="text-xs text-[oklch(0.5_0.01_220)] mb-1" style={{ fontFamily: "var(--font-mono)" }}>ROS 2 DDS over Wi-Fi</div>
+                <div className="text-xs text-[oklch(0.5_0.01_220)] mb-1" style={{ fontFamily: "var(--font-mono)" }}>ROS 2 Cyclone DDS over Wi-Fi</div>
                 <div className="w-full h-px bg-gradient-to-r from-[oklch(0.78_0.17_204/0.3)] via-[oklch(0.78_0.17_204/0.7)] to-[oklch(0.78_0.17_204/0.3)]" />
                 <div className="card-panel p-3 border border-[oklch(0.72_0.18_290/0.3)] text-center w-full">
                   <div className="sys-label mb-1">UGV_01</div>
@@ -760,7 +770,7 @@ export default function Home() {
               <div className="card-panel p-4 border border-[oklch(0.78_0.15_65/0.2)] text-center">
                 <div className="sys-label mb-2">UAV_02</div>
                 <div className="text-sm text-[oklch(0.7_0.01_220)] mb-1">Terrain-Scouting UAV</div>
-                <div className="text-xs text-[oklch(0.5_0.01_220)]" style={{ fontFamily: "var(--font-mono)" }}>Publishes: /terrain_map</div>
+                <div className="text-xs text-[oklch(0.5_0.01_220)]" style={{ fontFamily: "var(--font-mono)" }}>Publishes: /terrain_obstacle</div>
               </div>
             </div>
           </div>
@@ -835,6 +845,57 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <div className="card-panel p-8 border border-[oklch(0.72_0.18_290/0.25)] shadow-[0_0_30px_oklch(0.72_0.18_290/0.06)]">
+                <div className="flex items-center gap-2 mb-5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[oklch(0.72_0.18_290)]" />
+                  <span className="sys-label">FUTURE_03</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-[oklch(0.72_0.18_290)]" style={{ fontFamily: "var(--font-display)" }}>
+                  Coming Soon
+                </h3>
+                {/* <p className="text-[oklch(0.65_0.01_220)] leading-relaxed mb-4">
+                  Coming Soon
+                </p>
+                <div className="space-y-2 mt-4">
+                  {[
+                  "Coming Soon"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2 text-sm text-[oklch(0.6_0.01_220)]">
+                      <div className="w-1 h-1 rounded-full bg-[oklch(0.72_0.18_290)] mt-2 flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div> */}
+              </div>
+
+            <div className="card-panel p-8 border border-[oklch(0.72_0.18_145/0.25)] shadow-[0_0_30px_oklch(0.72_0.18_145/0.06)]">
+                <div className="flex items-center gap-2 mb-5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[oklch(0.72_0.18_145)]" />
+                  <span className="sys-label">FUTURE_04</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-[oklch(0.72_0.18_145)]" style={{ fontFamily: "var(--font-display)" }}>
+                  Coming Soon
+                </h3>
+                {/* <p className="text-[oklch(0.65_0.01_220)] leading-relaxed mb-4">
+                  Coming Soon
+                </p> */}
+                {/* <div className="space-y-2 mt-4">
+                  {[
+                  "Coming Soon"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2 text-sm text-[oklch(0.6_0.01_220)]">
+                      <div className="w-1 h-1 rounded-full bg-[oklch(0.72_0.18_145)] mt-2 flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div> */}
+              </div>
+
+
+
+          </div>
         </div>
       </section>
 
@@ -844,7 +905,7 @@ export default function Home() {
           <div className="flex items-center gap-2.5">
             <div className="status-dot" />
             <span className="sys-label text-[oklch(0.78_0.17_204)]">MOTHERSHIP</span>
-            <span className="text-[oklch(0.4_0.01_220)] text-xs" style={{ fontFamily: "var(--font-mono)" }}>— GLIDE FRAMEWORK</span>
+            {/* <span className="text-[oklch(0.4_0.01_220)] text-xs" style={{ fontFamily: "var(--font-mono)" }}>— GLIDE FRAMEWORK</span> */}
           </div>
           <div className="flex items-center gap-4">
             <a
